@@ -39,5 +39,11 @@ public class Pila {
         }
 
     }
-
+    public String toString(Stack<Character> pila) {
+        String resultado = "======Pila======"+"\nCantidad en la pila: "+pila.size();
+        for (int i=pila.size()-1;i>=0;i--){
+            resultado="\n"+pila.get(i);
+        }
+        return resultado;
+    }
 }

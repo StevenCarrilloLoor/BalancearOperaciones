@@ -6,6 +6,9 @@ public class Ventana {
     private JPanel principal;
     private JTextField txtTexto;
     private JButton btnBalanceo;
+    private JTextArea textApertura;
+    private JTextArea textCierre;
+    private JButton btnMirarPilas;
     Pila p= new Pila();
 
     public static void main(String[] args) {
@@ -26,5 +29,12 @@ public class Ventana {
             }
         });
 
-        }
+        btnMirarPilas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textApertura.setText(p.toString(p.pilaDeApertura));
+                textCierre.setText(p.toString(p.pilaDeCierre));
+            }
+        });
+    }
     }
